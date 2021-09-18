@@ -1,0 +1,15 @@
+{
+	"required" : true,
+	"minVersion" : "0.8",
+	"package" : "dev.quantumfusion.bettersleepplus.mixin",
+	"compatibilityLevel" : "JAVA_16",
+	"mixins" : [
+		"ServerWorldMixin",
+		"SleepOverrideMixin"
+	],
+	"client" : [
+	],
+	"injectors" : {
+		"defaultRequire" : 1
+	}
+}
