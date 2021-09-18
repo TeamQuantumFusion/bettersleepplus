@@ -42,9 +42,7 @@ public class TimeInfo {
 
 	public void tick(int amount, boolean dayLightCycle) {
 		w.setTime(w.getTime() + amount);
-		if (dayLightCycle) {
-			w.setTimeOfDay((w.getTimeOfDay() + amount) % DAY_LENGTH);
-		}
+		if (dayLightCycle) w.setTimeOfDay((w.getTimeOfDay() + amount) % DAY_LENGTH);
 		WeatherInfo.appendAll(w, amount);
 	}
 

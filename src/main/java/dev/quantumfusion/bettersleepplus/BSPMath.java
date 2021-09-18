@@ -10,11 +10,11 @@ public class BSPMath {
 	}
 
 	public static int calcSecondsRemaining(int stepPerTick, TimeInfo info, int tps) {
-		return (int) Math.ceil((info.calcTicksUntilAwake() / (double) stepPerTick) / tps);
+		return (int) Math.ceil(info.calcTicksUntilAwake() / (double) stepPerTick / tps);
 	}
 
 	private static double createCurve(double curveAggression, double playerPercentage) {
-		return ((curveAggression * playerPercentage) / ((((curveAggression * playerPercentage) * 2) - (curveAggression - playerPercentage)) + 1));
+		return curveAggression * playerPercentage / (curveAggression * playerPercentage * 2 - (curveAggression - playerPercentage) + 1);
 	}
 
 
